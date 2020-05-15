@@ -1,4 +1,4 @@
-
+# Getting Serial from BIOS via WmiObject
 Write-Host "Getting Serial from BIOS" -ForegroundColor Cyan
 $progressPreference = 'silentlyContinue'
 $serial = (Get-WmiObject -Class win32_bios).serialnumber
