@@ -2,11 +2,6 @@
 $progressPreference = 'silentlyContinue'
 $serial = (Get-WmiObject -Class win32_bios).serialnumber
 
-## Intune Login Account
-#Write-Host "Type in the username that has premission to administer Intune and autopilot" -ForegroundColor Cyan
-#$user = Read-Host "Enter the e-mail address of the user that has premission to administer Intune"
-
-
 # Downloading and installing Azure AD and WindowsAutoPilotIntune Module
 Write-Host "Downloading and installing AzureAD module" -ForegroundColor Cyan
 Install-Module AzureAD,WindowsAutoPilotIntune,Microsoft.Graph.Intune -Force
@@ -23,14 +18,6 @@ Install-Script -Name Get-WindowsAutoPilotInfo -Force
 Write-Host "Connecting to Microsoft Graph" -ForegroundColor Cyan
 
 Connect-MSGraph
-#Try {    
-#    Connect-MSGraph-Credential (Get-credential -username $user -message "Type in the password")
-#    write-host "Successfully connected to Microsoft Graph" -foregroundcolor green
-#}
-#Catch {
-#    write-host "Error: Could not connect to Microsoft Graph. Please login with the account that has premissions to administer Intune and autopilot or verify your password" -foregroundcolor red 
-#Break }
-
 
 # Creating temporary folder to store autopilot csv file 
 
