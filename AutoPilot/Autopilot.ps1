@@ -26,11 +26,11 @@ Write-Host "Checking if Temp folder exist in C:\" -ForegroundColor Cyan
 
 IF (!(Test-Path C:\Temp) -eq $true) {
 
-    Write-Host "Test folder was not found in C:\. Creating Test Folder..." -ForegroundColor Cyan
+    Write-Host "Temp folder was not found in C:\. Creating Temp Folder..." -ForegroundColor Cyan
     New-Item -Path C:\Temp -ItemType Directory | Out-Null
 }
 
-Else { Write-Host "Test folder already exist" -ForegroundColor Green }
+Else { Write-Host "Temp folder already exist" -ForegroundColor Green }
 
 # Creating Autopilot csv file
 Write-Host "Creating Autopilot CSV File" -ForegroundColor Cyan
