@@ -1,4 +1,4 @@
-﻿Clear
+Clear
 
 
 #Einleitung
@@ -106,6 +106,8 @@ Foreach($number in $number)
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User joeran.brenn@niersberger.de
    Start-Sleep -s 2
+   Add-TeamUser -GroupId $group.GroupId  -User pal.boelcskei@niersberger.de
+   Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User enrico.canonico@niersberger.de
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User alexandra.gawenda@niersberger.de
@@ -114,15 +116,15 @@ Foreach($number in $number)
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User karolina.heil@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User martin.kalinowski@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User markus.hirt@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User lorena.Kqira@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User martin.kalinowski@niersberger.de
    Start-Sleep -s 2
    Add-TeamUser -groupid $group.groupid  -User glikeria.kranvogel@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User sandra.liedtke@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User dietmar.leichsenring@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User julia.niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User sandra.liedtke@niersberger.de
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User christian.pichl@niersberger.de
    Start-Sleep -s 2
@@ -137,8 +139,6 @@ Foreach($number in $number)
    Add-TeamUser -GroupId $group.GroupId  -User stefan.schleicher@niersberger.de
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User martin.scholz@niersberger.de
-   Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User silvia.schubbert@niersberger.de
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User christopher.sheffield@niersberger.de
    Start-Sleep -s 2
