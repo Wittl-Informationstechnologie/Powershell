@@ -1,0 +1,47 @@
+#Das ist ein Script um Spalten für die Archivierung hinzuzufügen
+# Überprüfen, ob das SharePointPnPPowerShellOnline-Modul installiert ist
+if (-not (Get-Module -ListAvailable -Name PnP.Powershell)) {
+    # Installieren des SharePointPnPPowerShellOnline-Moduls
+    Install-Module -Name PnP.Powershell -Force -AllowClobber
+	Import-Module PnP.Powershell
+
+}
+
+# Verbinden mit der SharePoint-Website
+$siteUrl = Read-Host "Geben Sie die SharePointAdmin-Website-URL ein"
+Connect-PnPOnline -Url $siteUrl -Interactive
+ 
+# Name der Dokumentenbibliothek
+$libraryName = Read-Host "Geben sie den Namen der Dokumentenbibliothek an"
+ 
+# Spalten, die hinzugefügt werden sollen
+$columnsToAdd = @(
+    "Projektnummer",
+    "Aktenplan",
+    "Bereit zur Archivierung",
+    "Beschreibung"
+)
+ 
+# Spalten umbenennen
+Set-PnPField -List $libraryName -Identity "Title" -Values @{Title="Name"}
+ 
+# Spalten hinzufügen
+foreach ($column in $columnsToAdd) {
+    Add-PnPField -List $libraryName -DisplayName $column -InternalName $column -Type Text -Required $false
+}
+ 
+# Aktenplan-Spalte als Auswahl hinzufügen
+$choices = "AG-Kalkulation", "AG-Angebot", "AG-Vertrag", "AG-Nachtrag", "AG-Abnahme", "AN-Angebot", "AN-Vertrag", "AN-Nachtrag", "AN-Abnahme", "Schriftverkehr", "Technische Unterlagen", "Kaufmänische Unterlagen", "Bescheinigungen", "AG-Mängel", "AN-Mängel", "Bürgschaften/Avale", "Aktennotizen + Protokolle", "Dokumentation", "Immobilie", "Fuhrpark"
+Add-PnPField -List $libraryName -DisplayName "Aktenplan" -InternalName "Aktenplan" -Type Choice -Choices $choices -Required $true
+ 
+# Bereit zur Archivierung-Spalte als Ja/Nein hinzufügen
+Add-PnPField -List $libraryName -DisplayName "Bereit zur Archivierung" -InternalName "Bereit_zur_Archivierung" -Type Boolean -Required $true
+ 
+# Beschreibung-Spalte als mehrzeiliger Text hinzufügen
+Add-PnPField -List $libraryName -DisplayName "Beschreibung" -InternalName "Beschreibung" -Type Note -Required $false
+ 
+# Verbindung trennen
+Disconnect-PnPOnline
+ 
+# Erfolgsmeldung ausgeben
+Write-Host "Zusätzliche Spalten wurden zur Dokumentenbibliothek hinzugefügt."
