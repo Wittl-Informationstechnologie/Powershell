@@ -100,7 +100,7 @@ Foreach($number in $number)
    New-TeamChannel -GroupId $group.GroupId -DisplayName "Archivierung"
 
 
-   Add-TeamUser -GroupId $group.GroupId  -User fabian.rene@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User rene.fabian@niersberger.de
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User andreas.bartl@niersberger.de
    Start-Sleep -s 2
@@ -112,7 +112,7 @@ Foreach($number in $number)
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User alexandra.gawenda@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User doris.giese@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User doris.giese@niersberger.de -Role Owner
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User karolina.heil@niersberger.de
    Start-Sleep -s 2
@@ -120,7 +120,7 @@ Foreach($number in $number)
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User martin.kalinowski@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -groupid $group.groupid  -User glikeria.kranvogel@niersberger.de
+   Add-TeamUser -groupid $group.groupid  -User glikeria.kranvogel@niersberger.de -Role Owner
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User dietmar.leichsenring@niersberger.de
    Start-Sleep -s 2
@@ -138,7 +138,7 @@ Foreach($number in $number)
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User stefan.schleicher@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User martin.scholz@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User martin.scholz@niersberger.de -Role Owner
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User christopher.sheffield@niersberger.de
    Start-Sleep -s 2
@@ -150,7 +150,7 @@ Foreach($number in $number)
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User natanel.wuensch@niersberger.de
    Start-Sleep -s 2
-   Add-TeamUser -GroupId $group.GroupId  -User torsten.wybranitz@niersberger.de
+   Add-TeamUser -GroupId $group.GroupId  -User torsten.wybranitz@niersberger.de -Role Owner
    Start-Sleep -s 2
    Add-TeamUser -GroupId $group.GroupId  -User hueseyin.yildiz@niersberger.de
    Start-Sleep -s 2
