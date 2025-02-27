@@ -208,10 +208,8 @@ switch ($number) {
     -Channels @("01 Angebote und Verträge", "02 Bauunterlagen", "03 Pläne", "04 Kostenschätzung -berechnung -verfolgung", "05 Schriftverkehr - Protokolle - Fotos - Sonstiges", "06 Berechnungen", "07 Herstellerunterlagen", "08 Leistungsverzeichnisse", "09 Objektüberwachung", "10 Abgabe", "11 CAD", "Archivierung") `
     -Users @{
         "daniel.wich@nwe.gmbh"="Owner";
-        "alessa.hahn@nwe.gmbh"="Member";
-        "felix.schoenberger@nwe.gmbh"="Member";
+        "alessa.hahn@nwe.gmbh"="Owner";
         "tobias.hirt@nwe.gmbh"="Member";
-        "michael.kaleta@nwe.gmbh"="Member";
         "marco.kuehn@nwe.gmbh"="Member";
         "xiaoyan.lin@niersberger.de"="Member";
         "torsten.wybranitz@niersberger.de"="Member";
