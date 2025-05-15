@@ -49,7 +49,7 @@ Write-Host -ForegroundColor Green "Nun brauche ich noch einige Parameter von dir
 
 $displayname = Read-Host "Name für das Team"
 $MailNickName = Read-Host "Name für die Mail WICHTIG! Ohne Domäne eingeben!"
-$number = Read-Host "Für welche Abteilung soll das Team erstellt werden? (1 for NWA, 2 for NWE, 3 for SUN, 4 for RME, 5 for SF-Bau, 6 for NGA)"
+$number = Read-Host "Für welche Abteilung soll das Team erstellt werden? (1 for NWA, 2 for NWE, 3 for SUN, 4 for RME, 5 for SF-Bau, 6 for NGA, 7 for Donat)"
 
 try {
     $group = New-Team -MailNickname $MailNickName -DisplayName $displayname -Visibility Private `
@@ -207,23 +207,33 @@ switch ($number) {
     Add-TeamDetails -GroupId $group.GroupId `
     -Channels @("01 Angebote und Verträge", "02 Bauunterlagen", "03 Pläne", "04 Kostenschätzung -berechnung -verfolgung", "05 Schriftverkehr - Protokolle - Fotos - Sonstiges", "06 Berechnungen", "07 Herstellerunterlagen", "08 Leistungsverzeichnisse", "09 Objektüberwachung", "10 Abgabe", "11 CAD", "Archivierung") `
     -Users @{
-        "daniel.wich@nwe.gmbh"="Owner";
         "alessa.hahn@nwe.gmbh"="Owner";
-        "tobias.hirt@nwe.gmbh"="Member";
-        "marco.kuehn@nwe.gmbh"="Member";
-        "xiaoyan.lin@niersberger.de"="Member";
-        "torsten.wybranitz@niersberger.de"="Member";
-        "annika.schimon@niersberger.de"="Member";
-        "rene.fabian@niersberger.de"="Member";
-        "oliver.reichel@nwe.gmbh"="Member";
-        "igor.pomozov@nwe.gmbh"="Member";
-        "frank.baessler@hnb-energie.de"="Member";
-        "sebastian.kammerer@nwe.gmbh"="Member";
-        "alessandro.eckert@nwe.gmbh"="Member";
-        "yulia.kuznetsova@nwe.gmbh"="Member";
+        "daniel.wich@nwe.gmbh"="Owner";
+        "bernhard.schierl@nwe.gmbh"="Member";
         "david.zhu@nwe.gmbh"="Member";
+        "dirk.bruckhaus@nwe.gmbh"="Member";
+        "igor.pomozov@nwe.gmbh"="Member";
+        "annika.schimon@niersberger.de"="Member";
+        "jonathan.griener@nwe.gmbh"="Member";
         "iris.wehner@nwe.gmbh"="Member";
         "linh.nguyen@nwe.gmbh"="Member";
+	"luis.frankenhauser@nwe.gmbh"="Member";
+        "marco.kuehn@nwe.gmbh"="Member";
+        "marion.kuehn@nwe.gmbh"="Member";
+        "michael.spangler@nwe.gmbh"="Member";
+        "oliver.reichel@nwe.gmbh"="Member";
+        "phil.spindler@nwe.gmbh"="Member";
+	"sebastian.kammerer@nwe.gmbh"="Member";
+        "tatjana.korobkina@nwe.gmbh"="Member";
+        "tobias.hirt@nwe.gmbh"="Member";
+        "victor.mironenko@nwe.gmbh"="Member";
+        "xiaoyan.lin@niersberger.de"="Member";
+        "frank.baessler@hnb-energie.de"="Member";
+        "yulia.kuznetsova@nwe.gmbh"="Member";
+        "cesar.herranz@nwe.gmbh"="Member";
+        "ines.aldaz@nwe.gmbh"="Member";
+        "jose.andreu@nwe.gmbh"="Member";
+	"jose.collado@nwe.gmbh"="Member";
         "thomas.ennich@nwe.gmbh"="Owner"
     } `
     -ImagePath "$env:HOMEPATH\Wittl-IT\Wittl-IT Kunden - Dokumente\Niersberger\Projekt Teams V2\NWE 84x84.jpg"
@@ -284,6 +294,22 @@ switch ($number) {
        
     } `
     
+}
+"7" {
+    # Channels beibehalten
+    Add-TeamDetails -GroupId $group.GroupId `
+    -Channels @("Archivierung") `
+    -Users @{
+        "maximilian.hass@niersberger.de"="Owner";
+        "enrico.donat@donat-haustechnik.de"="Member";
+        "christian.putsche@rme.eu"="Member";
+        "luisa.koppe@donat-haustechnik.de"="Member";
+        "thomas.brauer@rme.eu"="Member";
+        "sebastian.schmidt@donat-haustechnik.de"="Member"
+
+    } `
+    -ImagePath "C:\Users\tristan.boehling\OneDrive - Wittl-IT\Dokumente\Kunden\Niersberger-Dokumente\Projekte-Teamserstellung\Donat-klein.png"
+
 }
 
 
