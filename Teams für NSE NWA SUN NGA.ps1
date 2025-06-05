@@ -173,15 +173,14 @@ switch ($number) {
         "rene.fabian@niersberger.de"="Member";
         "andreas.bartl@niersberger.de"="Member";
         "joeran.brenn@niersberger.de"="Member";
-        "pal.boelcskei@niersberger.de"="Member";
+        "diego.foith@niersberger.de"="Member";
         "enrico.canonico@niersberger.de"="Member";
         "alexandra.gawenda@niersberger.de"="Member";
         "doris.giese@niersberger.de"="Owner";
         "karolina.heil@niersberger.de"="Member";
-        "markus.hirt@niersberger.de"="Member";
+        "oliver.paulini@niersberger.de"="Member";
         "martin.kalinowski@niersberger.de"="Member";
         "glikeria.kranvogel@niersberger.de"="Owner";
-        "dietmar.leichsenring@niersberger.de"="";
         "sandra.liedtke@niersberger.de"="Member";
         "christian.pichl@niersberger.de"="Member";
         "stefanie.piller@niersberger.de"="Member";
@@ -197,7 +196,7 @@ switch ($number) {
         "natanel.wuensch@niersberger.de"="Member";
         "torsten.wybranitz@niersberger.de"="Owner";
         "hueseyin.yildiz@niersberger.de"="Member";
-        "hande.yilmaz@niersberger.de"="Member";
+        "azra.abdukic@niersberger.de"="Member";
         "hendrik.zink@niersberger.de"="Member"
     } `
     -ImagePath "$env:HOMEPATH\Wittl-IT\Wittl-IT Kunden - Dokumente\Niersberger\Projekt Teams V2\Niersberger-N.jpg"
@@ -205,7 +204,7 @@ switch ($number) {
 "2" {
     # Channels beibehalten
     Add-TeamDetails -GroupId $group.GroupId `
-    -Channels @("01 Angebote und Verträge", "02 Bauunterlagen", "03 Pläne", "04 Kostenschätzung -berechnung -verfolgung", "05 Schriftverkehr - Protokolle - Fotos - Sonstiges", "06 Berechnungen", "07 Herstellerunterlagen", "08 Leistungsverzeichnisse", "09 Objektüberwachung", "10 Abgabe", "11 CAD", "Archivierung") `
+    -Channels @("01 Angebote und Verträge", "02 Bauunterlagen", "03 Pläne", "04 Kostenschätzung -berechnung -verfolgung", "05 Schriftverkehr - Protokolle - Fotos - Sonstiges", "06 Berechnungen", "07 Herstellerunterlagen", "08 Leistungsverzeichnisse", "09 Objektüberwachung", "10 Abgabe", "C", "Archivierung") `
     -Users @{
         "alessa.hahn@nwe.gmbh"="Owner";
         "daniel.wich@nwe.gmbh"="Owner";
@@ -266,7 +265,11 @@ switch ($number) {
         "lisa.michaelis@rme.eu"="Member";
         "claudia.lunderstedt-georgi@rme.eu"="Member";
         "sabrina.peters@rme.eu"="Member";
-        "andrea.lohmann@rme.eu"="Member"
+        "andrea.lohmann@rme.eu"="Member";
+	"david.obst@rme.eu"="Member";
+	"domenik.rein@rme.eu"="Member";
+	"sebastian.schmidt@rme.eu"="Member";
+	"franziska.grospietsch@rme.eu"="Member"
     } `
     -ImagePath "C:\Users\tristan.boehling\OneDrive - Wittl-IT\Dokumente\Kunden\Niersberger-Dokumente\Projekte-Teamserstellung\RME-Logo-RGB.png"
 }
